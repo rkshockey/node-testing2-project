@@ -17,7 +17,7 @@ router.put('/:id', (req, res, next) => {
 })
 
 router.delete('/:id', (req, res, next) => {
-    
+
 })
 
-module.exports(router);
+module.exports = router;
