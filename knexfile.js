@@ -2,7 +2,7 @@
 
 const common = {
   client: 'sqlite3',
-  setNullAsDefault: true,
+  useNullAsDefault: true,
   migrations: {
     directory: './data/migrations'
   },
