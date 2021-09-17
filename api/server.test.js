@@ -29,3 +29,17 @@ describe('[GET] /api/users', () => {
         expect(res.body).toMatchObject(expected)
     })
 })
+
+describe('[GET] /api/users/id', () => {
+    let res
+    beforeEach(async () => {
+        res = await request(server).get('/api/users/1')
+    })
+    it('[3] returns the correct user', () => {
+        const expected = { username: 'foo', id: 1 }
+        expect(res.body).toMatchObject(expected)
+    })
+    it('[4] returns 200 okay', () => {
+        expect(res.status).toBe(200)
+    })
+})
